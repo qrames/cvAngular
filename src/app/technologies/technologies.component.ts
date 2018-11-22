@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Technologie } from '../technologie';
+
 @Component({
   selector: 'app-technologies',
   templateUrl: './technologies.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechnologiesComponent implements OnInit {
 
-  technologie = {
+  technologie: Technologie = {
     'name': 'Angular',
     'class': "fab fa-angular",
     'progresse': 30,
