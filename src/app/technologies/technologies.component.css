@@ -1,0 +1,327 @@
+section > ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+section > ul > li {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  list-style: none;
+  background-color: #2E46B8;
+}
+section > ul > li > i {
+  font-size: 5rem;
+}
+section > ul > li .progress {
+  background-color: #555555;
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+section > ul > li .progress > div {
+  background-color: #02B319;
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+section > ul > li .progress > div .level-1 {
+  width: 2%;
+}
+section > ul > li .progress > div .level-2 {
+  width: 3%;
+}
+section > ul > li .progress > div .level-3 {
+  width: 4%;
+}
+section > ul > li .progress > div .level-4 {
+  width: 5%;
+}
+section > ul > li .progress > div .level-5 {
+  width: 6%;
+}
+section > ul > li .progress > div .level-6 {
+  width: 7%;
+}
+section > ul > li .progress > div .level-7 {
+  width: 8%;
+}
+section > ul > li .progress > div .level-8 {
+  width: 9%;
+}
+section > ul > li .progress > div .level-9 {
+  width: 10%;
+}
+section > ul > li .progress > div .level-10 {
+  width: 11%;
+}
+section > ul > li .progress > div .level-11 {
+  width: 12%;
+}
+section > ul > li .progress > div .level-12 {
+  width: 13%;
+}
+section > ul > li .progress > div .level-13 {
+  width: 14%;
+}
+section > ul > li .progress > div .level-14 {
+  width: 15%;
+}
+section > ul > li .progress > div .level-15 {
+  width: 16%;
+}
+section > ul > li .progress > div .level-16 {
+  width: 17%;
+}
+section > ul > li .progress > div .level-17 {
+  width: 18%;
+}
+section > ul > li .progress > div .level-18 {
+  width: 19%;
+}
+section > ul > li .progress > div .level-19 {
+  width: 20%;
+}
+section > ul > li .progress > div .level-20 {
+  width: 21%;
+}
+section > ul > li .progress > div .level-21 {
+  width: 22%;
+}
+section > ul > li .progress > div .level-22 {
+  width: 23%;
+}
+section > ul > li .progress > div .level-23 {
+  width: 24%;
+}
+section > ul > li .progress > div .level-24 {
+  width: 25%;
+}
+section > ul > li .progress > div .level-25 {
+  width: 26%;
+}
+section > ul > li .progress > div .level-26 {
+  width: 27%;
+}
+section > ul > li .progress > div .level-27 {
+  width: 28%;
+}
+section > ul > li .progress > div .level-28 {
+  width: 29%;
+}
+section > ul > li .progress > div .level-29 {
+  width: 30%;
+}
+section > ul > li .progress > div .level-30 {
+  width: 31%;
+}
+section > ul > li .progress > div .level-31 {
+  width: 32%;
+}
+section > ul > li .progress > div .level-32 {
+  width: 33%;
+}
+section > ul > li .progress > div .level-33 {
+  width: 34%;
+}
+section > ul > li .progress > div .level-34 {
+  width: 35%;
+}
+section > ul > li .progress > div .level-35 {
+  width: 36%;
+}
+section > ul > li .progress > div .level-36 {
+  width: 37%;
+}
+section > ul > li .progress > div .level-37 {
+  width: 38%;
+}
+section > ul > li .progress > div .level-38 {
+  width: 39%;
+}
+section > ul > li .progress > div .level-39 {
+  width: 40%;
+}
+section > ul > li .progress > div .level-40 {
+  width: 41%;
+}
+section > ul > li .progress > div .level-41 {
+  width: 42%;
+}
+section > ul > li .progress > div .level-42 {
+  width: 43%;
+}
+section > ul > li .progress > div .level-43 {
+  width: 44%;
+}
+section > ul > li .progress > div .level-44 {
+  width: 45%;
+}
+section > ul > li .progress > div .level-45 {
+  width: 46%;
+}
+section > ul > li .progress > div .level-46 {
+  width: 47%;
+}
+section > ul > li .progress > div .level-47 {
+  width: 48%;
+}
+section > ul > li .progress > div .level-48 {
+  width: 49%;
+}
+section > ul > li .progress > div .level-49 {
+  width: 50%;
+}
+section > ul > li .progress > div .level-50 {
+  width: 51%;
+}
+section > ul > li .progress > div .level-51 {
+  width: 52%;
+}
+section > ul > li .progress > div .level-52 {
+  width: 53%;
+}
+section > ul > li .progress > div .level-53 {
+  width: 54%;
+}
+section > ul > li .progress > div .level-54 {
+  width: 55%;
+}
+section > ul > li .progress > div .level-55 {
+  width: 56%;
+}
+section > ul > li .progress > div .level-56 {
+  width: 57%;
+}
+section > ul > li .progress > div .level-57 {
+  width: 58%;
+}
+section > ul > li .progress > div .level-58 {
+  width: 59%;
+}
+section > ul > li .progress > div .level-59 {
+  width: 60%;
+}
+section > ul > li .progress > div .level-60 {
+  width: 61%;
+}
+section > ul > li .progress > div .level-61 {
+  width: 62%;
+}
+section > ul > li .progress > div .level-62 {
+  width: 63%;
+}
+section > ul > li .progress > div .level-63 {
+  width: 64%;
+}
+section > ul > li .progress > div .level-64 {
+  width: 65%;
+}
+section > ul > li .progress > div .level-65 {
+  width: 66%;
+}
+section > ul > li .progress > div .level-66 {
+  width: 67%;
+}
+section > ul > li .progress > div .level-67 {
+  width: 68%;
+}
+section > ul > li .progress > div .level-68 {
+  width: 69%;
+}
+section > ul > li .progress > div .level-69 {
+  width: 70%;
+}
+section > ul > li .progress > div .level-70 {
+  width: 71%;
+}
+section > ul > li .progress > div .level-71 {
+  width: 72%;
+}
+section > ul > li .progress > div .level-72 {
+  width: 73%;
+}
+section > ul > li .progress > div .level-73 {
+  width: 74%;
+}
+section > ul > li .progress > div .level-74 {
+  width: 75%;
+}
+section > ul > li .progress > div .level-75 {
+  width: 76%;
+}
+section > ul > li .progress > div .level-76 {
+  width: 77%;
+}
+section > ul > li .progress > div .level-77 {
+  width: 78%;
+}
+section > ul > li .progress > div .level-78 {
+  width: 79%;
+}
+section > ul > li .progress > div .level-79 {
+  width: 80%;
+}
+section > ul > li .progress > div .level-80 {
+  width: 81%;
+}
+section > ul > li .progress > div .level-81 {
+  width: 82%;
+}
+section > ul > li .progress > div .level-82 {
+  width: 83%;
+}
+section > ul > li .progress > div .level-83 {
+  width: 84%;
+}
+section > ul > li .progress > div .level-84 {
+  width: 85%;
+}
+section > ul > li .progress > div .level-85 {
+  width: 86%;
+}
+section > ul > li .progress > div .level-86 {
+  width: 87%;
+}
+section > ul > li .progress > div .level-87 {
+  width: 88%;
+}
+section > ul > li .progress > div .level-88 {
+  width: 89%;
+}
+section > ul > li .progress > div .level-89 {
+  width: 90%;
+}
+section > ul > li .progress > div .level-90 {
+  width: 91%;
+}
+section > ul > li .progress > div .level-91 {
+  width: 92%;
+}
+section > ul > li .progress > div .level-92 {
+  width: 93%;
+}
+section > ul > li .progress > div .level-93 {
+  width: 94%;
+}
+section > ul > li .progress > div .level-94 {
+  width: 95%;
+}
+section > ul > li .progress > div .level-95 {
+  width: 96%;
+}
+section > ul > li .progress > div .level-96 {
+  width: 97%;
+}
+section > ul > li .progress > div .level-97 {
+  width: 98%;
+}
+section > ul > li .progress > div .level-98 {
+  width: 99%;
+}
+section > ul > li .progress > div .level-99 {
+  width: 100%;
+}
+section > ul > li .progress > div .level-100 {
+  width: 101%;
+}
+
+/*# sourceMappingURL=technologies.component.css.map */

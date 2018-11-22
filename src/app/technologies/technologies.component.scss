@@ -1,0 +1,64 @@
+section {
+
+
+  font-family: 'Montserrat', sans-serif;
+
+  color: #222E33;
+  background-color: #4B7E81;
+
+  > ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+    > li {
+      margin: 1rem;
+      list-style: none;
+      >.circle{
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        background-color: #8292DD;
+
+        > i {
+          padding-top: 1.5rem;
+          font-size: 5rem;
+        }
+        > h3 {
+          margin-top: 0;
+        }
+      }
+
+      h4 {
+        text-align: left;
+      }
+
+      .progress {
+        background-color: #202020;
+        height: 1rem;
+        border-radius: 1rem;
+        padding: 2px;
+        > div {
+          // background-color: #606dbc;
+          background: repeating-linear-gradient(
+            45deg,
+            #606dbc,
+            #606dbc 10px,
+            #465298 10px,
+            #465298 20px
+          );
+          height: 1rem;
+          border-radius: 1rem;
+          border: 2px white solid;
+          box-sizing: border-box;
+
+          @for $progress from 1 through 100 {
+            &.level-#{$progress}{
+              width: $progress + 1%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
