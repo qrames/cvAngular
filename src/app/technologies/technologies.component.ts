@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Technologie } from '../technologie';
+import { TECHNOLOGIES } from '../mock-technologies';
 
 @Component({
   selector: 'app-technologies',
@@ -9,11 +9,7 @@ import { Technologie } from '../technologie';
 })
 export class TechnologiesComponent implements OnInit {
 
-  technologie: Technologie = {
-    'name': 'Angular',
-    'class': "fab fa-angular",
-    'progresse': 30,
-  };
+  technologies = TECHNOLOGIES;
 
   constructor() { }
 

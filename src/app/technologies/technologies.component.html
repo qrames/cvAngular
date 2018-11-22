@@ -2,10 +2,14 @@
   <h2>
     technologies
   </h2>
-  <h3>{{technologie.name}}</h3>
-  <i class="{{technologie.class}}"></i>
-  <div class="progress">
-    <div class="level-{{technologie.progress}}"></div>
-  </div>
+  <ul>
+    <li  *ngFor="let technologie of technologies">
+      <h3>{{technologie.name}}</h3>
+      <i class="{{technologie.class}}"></i>
+      <div class="progress">
+        <div class="level-{{technologie.progress}}"></div>
+      </div>
+    </li>
+  </ul>
 
 </section>
