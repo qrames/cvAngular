@@ -4,10 +4,11 @@
   </h2>
   <ul>
     <li  *ngFor="let technologie of technologies">
-      <div class="circle">
+
+      <a class="circle" href="{{technologie.url != '' ?  technologie.url : '#'}}">
         <i class="{{technologie.class}}"></i>
         <h3>{{technologie.name}}</h3>
-      </div>
+      </a>
       <h4>
         niveau :
         <div class="progress">
