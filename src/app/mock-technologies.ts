@@ -10,7 +10,7 @@ export const TECHNOLOGIES: Technologie[] = [
   {
     'name': 'Django',
     'class': "fab fa-python",
-    'progress': 80,
+    'progress': 90,
     'url': "",
   },
   {
@@ -23,6 +23,12 @@ export const TECHNOLOGIES: Technologie[] = [
     'name': 'Django-CMS',
     'class': "fab fa-python",
     'progress': 60,
+    'url': "",
+  },
+  {
+    'name': 'Wordpress',
+    'class': "fab fa-php",
+    'progress': 20,
     'url': "",
   },
 
