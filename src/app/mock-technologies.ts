@@ -31,5 +31,11 @@ export const TECHNOLOGIES: Technologie[] = [
     'progress': 20,
     'url': "",
   },
+  {
+    'name': 'JQuery',
+    'class': "fab fa-js",
+    'progress': 90,
+    'url': "",
+  },
 
 ];
