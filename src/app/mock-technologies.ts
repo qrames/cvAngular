@@ -37,5 +37,16 @@ export const TECHNOLOGIES: Technologie[] = [
     'progress': 90,
     'url': "",
   },
-
+  {
+    'name': 'github',
+    'class': "fab fa-github-alt",
+    'progress': 80,
+    'url': "",
+  },
+  {
+    'name': 'UIkit',
+    'class': "fab fa-uikit",
+    'progress': 80,
+    'url': "",
+  },
 ];
