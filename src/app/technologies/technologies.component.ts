@@ -9,8 +9,11 @@ import { TECHNOLOGIES } from '../mock-technologies';
 })
 export class TechnologiesComponent implements OnInit {
 
-  technologies = TECHNOLOGIES;
-
+  technologies = TECHNOLOGIES.sort(
+    function(a, b){
+      return b.progress - a.progress;
+    }
+  );
   constructor() { }
 
   ngOnInit() {
