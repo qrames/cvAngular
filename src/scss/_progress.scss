@@ -1,0 +1,36 @@
+
+.progress {
+  background-color: $color2;
+  height: 1rem;
+  border-radius: 1rem;
+  padding: 2px;
+  > div {
+    // background-color: #606dbc;
+    // background-position: left;
+    width: 25%;
+    position: static;
+    animation: width 15s infinite;
+    background: repeating-linear-gradient(
+      45deg,
+      #606dbc,
+      #606dbc 10px,
+      #465298 10px,
+      #465298 20px,
+      #606dbc 20px
+    ) top left;
+    height: 1rem;
+    border-radius: 1rem;
+    border: 2px white solid;
+    box-sizing: border-box;
+
+    @for $progress from 1 through 100 {
+      &.level-#{$progress}{
+        max-width: $progress + 0%;
+      }
+    }
+  }
+}
+@keyframes width {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}

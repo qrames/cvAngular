@@ -2,8 +2,8 @@
 section {
 
   padding-top: 2rem;
-  background-color: #4B7E81;
-
+  background-color: $color1;
+  color: #FFFFFF;
   > ul {
     display: flex;
     flex-wrap: wrap;
@@ -14,13 +14,12 @@ section {
       list-style: none;
       >.circle{
         display: block;
-        color: $color1;
+        color: $color0;
         text-decoration: none;
         height: 160px;
         width: 160px;
         border-radius: 50%;
-        background-color: #8292DD;
-
+        background-color: $color2;
         > i {
           padding-top: 1.5rem;
           font-size: 5rem;

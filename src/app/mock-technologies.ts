@@ -15,7 +15,7 @@ export const TECHNOLOGIES: Technologie[] = [
   },
   {
     'name': 'Prestashop',
-    'class': "fab fa-php",
+    'class': "fas fa-credit-card",
     'progress': 25,
     'url': "",
   },
@@ -27,7 +27,7 @@ export const TECHNOLOGIES: Technologie[] = [
   },
   {
     'name': 'Wordpress',
-    'class': "fab fa-php",
+    'class': "fab fa-wordpress",
     'progress': 20,
     'url': "",
   },
@@ -65,6 +65,12 @@ export const TECHNOLOGIES: Technologie[] = [
     'name': 'CSS 3',
     'class': "fab fa-css3-alt",
     'progress': 98,
+    'url': "",
+  },
+  {
+    'name': 'Sass',
+    'class': "fab fa-sass",
+    'progress': 85,
     'url': "",
   },
 ];
