@@ -2,8 +2,8 @@ import { Work } from './works';
 
 export const WORKS: Work[] = [
   {
-    'name': 'string',
-    'image': 'string',
-    'url': 'string',
+    'name': 'api Meteo',
+    'image': '../../../assets/images/meteo.png',
+    'url': 'nourl',
   },
 ]

@@ -4,13 +4,19 @@ export const TECHNOLOGIES: Technologie[] = [
   {
     'name': 'Angular',
     'class': "fab fa-angular",
-    'progress': 50,
+    'progress': 60,
     'url': "https://github.com/qrames/cvAngular",
   },
   {
     'name': 'Django',
     'class': "fab fa-python",
     'progress': 90,
+    'url': "",
+  },
+  {
+    'name': 'Bootstrap',
+    'class': "fas fa-code",
+    'progress': 80,
     'url': "",
   },
   {
@@ -40,7 +46,7 @@ export const TECHNOLOGIES: Technologie[] = [
   {
     'name': 'github',
     'class': "fab fa-github-alt",
-    'progress': 80,
+    'progress': 82,
     'url': "",
   },
   {
