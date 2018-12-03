@@ -10,15 +10,18 @@ export class TechnologiesSortService {
 
   constructor() { }
 
-  getTechonologies(orderBy): Technologie[] {
+  getTechonologies(orderBy, minProgress=0): Technologie[] {
     var sorted = [];
     switch(orderBy) {
       case "" :
+
       case "progressTop":
         sorted = TECHNOLOGIES.sort(
           function(a, b){
             return b.progress - a.progress;
           }
+        ).filter(
+          TECHNOLOGIES => TECHNOLOGIES.progress >= minProgress
         );
         break;
       case "progressDown":
@@ -35,7 +38,6 @@ export class TechnologiesSortService {
           )
         );
     }
-    console.log(sorted);
     if (sorted.length == 0){
       sorted = [
         {

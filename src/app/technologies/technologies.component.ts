@@ -18,15 +18,18 @@ export class TechnologiesComponent implements OnInit {
   ){}
 
   ngOnInit() {
-    this.getTechonologies("");
+    this.getTechonologies("", 0);
   }
 
-  getTechonologies(orderBy): void {
-    this.technologies = this.technologiesSortService.getTechonologies(orderBy);
+  getTechonologies(orderBy, minProgress): void {
+    this.technologies = this.technologiesSortService.getTechonologies(orderBy, minProgress);
   }
 
   onKey(event: any) { // without type info
-    this.getTechonologies(event.target.value);
+    this.getTechonologies(event.target.value, 0);
   }
+  setRange(progress) {
+    this.getTechonologies("", progress);
 
+  }
 }

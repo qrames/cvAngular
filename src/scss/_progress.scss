@@ -34,3 +34,10 @@
   0% { width: 0%; }
   100% { width: 100%; }
 }
+
+input[type="range"] {
+  background-color: $color2;
+  height: 1rem;
+  border-radius: 1rem;
+  padding: 2px;
+}
