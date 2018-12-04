@@ -5,7 +5,7 @@
   <label>rechercher :
   </label>
     <input (keyup)="onKey($event)">
-    <input type="range" #progress min="0" max="100" (change)="setRange(progress.value)">
+    <input type="range" #progress min="0" max="100" (change)="setRange(progress.value)" value="0">
   <ul>
     <li  *ngFor="let technologie of technologies">
       <a class="circle" href="{{technologie.url != '' ?  technologie.url : '#'}}">
