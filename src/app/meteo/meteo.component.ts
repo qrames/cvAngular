@@ -16,16 +16,6 @@ export class MeteoComponent implements OnInit {
     // Déclaration de la carte avec les coordonnées du centre et le niveau de zoom.
     const meteoMap = L.map('myleaflet').setView([50.6311634, 3.0599573], 12);
 
-    meteoMap.on('click', function() {
-      if (meteoMap.scrollWheelZoom.enabled()) {
-        // meteoMap.scrollWheelZoom.disable();
-        // $('#map').addClass("active");
-      }
-      else {
-        meteoMap.scrollWheelZoom.enable();
-        // $('#map').removeClass("active");
-      }
-    });
     L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: 'Frugal Map'
     }).addTo(meteoMap);
