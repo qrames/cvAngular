@@ -13,7 +13,7 @@ export class TechnologiesService {
 
   constructor(private http: HttpClient) { }
 
-  getTechonologies(orderBy, minProgress=0): Observable<Technologie[]> {
+  getTechonologies(): Observable<Technologie[]> {
 
     return this.http.get<Technologie[]>('http://127.0.0.1:8000/technologies/');
 
