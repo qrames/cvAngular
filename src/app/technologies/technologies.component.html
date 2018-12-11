@@ -9,7 +9,7 @@
   <ul>
     <li  *ngFor="let technologie of technologies">
       <a class="circle" href="{{technologie.url != '' ?  technologie.url : '#'}}">
-        <i class="{{technologie.class}}"></i>
+        <i class="{{technologie.icon}}"></i>
         <h3>{{technologie.name}}</h3>
       </a>
       <h4>

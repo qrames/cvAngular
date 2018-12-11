@@ -7,6 +7,8 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { WorksComponent } from './works/works.component';
 import { MeteoComponent } from './meteo/meteo.component';
 
+import { HttpClientModule  } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { MeteoComponent } from './meteo/meteo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

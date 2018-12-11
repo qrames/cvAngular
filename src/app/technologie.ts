@@ -1,6 +1,6 @@
 export class Technologie {
   name: string;
-  class: string;
+  icon: string;
   progress: number;
   url: string;
 }
