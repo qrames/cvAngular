@@ -1,5 +1,6 @@
 @import "../../scss/color";
 #map {
+  overflow: hidden;
   position: relative;
   height: 300px;
   button {
@@ -30,8 +31,8 @@
   #myleaflet {
     z-index: 1;
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
   }
   &.active{
     position: absolute;
