@@ -68,7 +68,7 @@ export class TechnologiesComponent implements OnInit {
   }
 
   onKey(event: KeyboardEvent) { // without type info
-    this.getTechonologies(event.target.value, 0);
+    this.getTechonologies( (<HTMLInputElement>event.target).value, 0);
   }
   setRange(progress) {
     this.getTechonologies("", progress);
