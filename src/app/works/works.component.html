@@ -2,9 +2,10 @@
   <h2>
     Réalisations
   </h2>
-  <ul>
-    <li  *ngFor="let work of works" >
+  <ul class="works">
+    <li class="work" *ngFor="let work of works" >
       <a class="circle" href="{{work.url != '' ?  work.url : '#'}}">
+        <img src="{{work.image}}" alt="">
       </a>
     </li>
   </ul>

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable, of } from 'rxjs';
+import { Work } from './works';
+import { WorksService } from '../works.service'
 import { WORKS } from '../mock-works';
 
 @Component({
@@ -9,11 +12,21 @@ import { WORKS } from '../mock-works';
 })
 export class WorksComponent implements OnInit {
 
-  works = WORKS;
+  works: Work[];
 
-  constructor() { }
+  constructor(private WorksService: WorksService) { }
 
   ngOnInit() {
+      this.getWorks();
+  }
+
+  getWorks(){
+    this.WorksService
+    .getWorks()
+    .subscribe( (works) => {
+      console.log(works)
+      this.works = works
+    });
   }
 
 }

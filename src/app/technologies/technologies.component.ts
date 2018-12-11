@@ -72,6 +72,5 @@ export class TechnologiesComponent implements OnInit {
   }
   setRange(progress) {
     this.getTechonologies("", progress);
-
   }
 }
