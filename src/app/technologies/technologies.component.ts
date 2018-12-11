@@ -67,7 +67,7 @@ export class TechnologiesComponent implements OnInit {
     });
   }
 
-  onKey(event: any) { // without type info
+  onKey(event: KeyboardEvent) { // without type info
     this.getTechonologies(event.target.value, 0);
   }
   setRange(progress) {
