@@ -4,6 +4,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { TechnologiesService } from '../technologies.service';
 import { Technologie } from '../technologie';
 
+import { StyleByCategoryDirective } from '../style-by-category.directive';
+
 @Component({
   selector: 'app-technologies',
   templateUrl: './technologies.component.html',

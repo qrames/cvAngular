@@ -8,13 +8,15 @@ import { WorksComponent } from './works/works.component';
 import { MeteoComponent } from './meteo/meteo.component';
 
 import { HttpClientModule  } from '@angular/common/http';
+import { StyleByCategoryDirective } from './style-by-category.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     TechnologiesComponent,
     WorksComponent,
-    MeteoComponent
+    MeteoComponent,
+    StyleByCategoryDirective
   ],
   imports: [
     BrowserModule,
