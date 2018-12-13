@@ -7,8 +7,11 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { WorksComponent } from './works/works.component';
 import { MeteoComponent } from './meteo/meteo.component';
 
+// my inport
 import { HttpClientModule  } from '@angular/common/http';
 import { StyleByCategoryDirective } from './style-by-category.directive';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +25,7 @@ import { StyleByCategoryDirective } from './style-by-category.directive';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    LeafletModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
