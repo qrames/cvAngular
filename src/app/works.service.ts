@@ -13,8 +13,8 @@ export class WorksService {
 
   constructor(private http : HttpClient) { }
 
-  getWorks() : Observable<Work>{
-    return this.http.get('http://127.0.0.1:8000/' + 'works/');
+  getWorks(): Observable<Work[]>{
+    return this.http.get<Work[]>('http://127.0.0.1:8000/' + 'works/');
   }
 
 }

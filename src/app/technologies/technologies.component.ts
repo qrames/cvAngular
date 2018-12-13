@@ -61,6 +61,7 @@ export class TechnologiesComponent implements OnInit {
           'icon': "fas fa-question",
           'progress': 1,
           'url': "",
+          'category': 1,
         },
       ];
       }

@@ -3,4 +3,5 @@ export class Technologie {
   icon: string;
   progress: number;
   url: string;
+  category: number;
 }

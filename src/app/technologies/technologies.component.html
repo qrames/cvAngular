@@ -8,7 +8,7 @@
     <input type="range" #progress min="0" max="100" (change)="setRange(progress.value)" value="0">
   <ul>
     <li  *ngFor="let technologie of technologies">
-      <a class="circle" href="{{technologie.url != '' ?  technologie.url : '#'}}" technoStyleByCategory>
+      <a class="circle" href="{{technologie.url != '' ?  technologie.url : '#'}}" technoStyleByCategory="{{technologie.category}}">
         <i class="{{technologie.icon}}"></i>
         <h3>{{technologie.name}}</h3>
       </a>
