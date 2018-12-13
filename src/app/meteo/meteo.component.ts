@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as $ from 'jquery';
-// import * as L from 'leaflet';
+
 import { latLng, LatLng, tileLayer } from 'leaflet';
+
+import { CommunesService } from '../communes.service';
 
 @Component({
   selector: 'app-meteo',
@@ -12,7 +14,9 @@ import { latLng, LatLng, tileLayer } from 'leaflet';
 export class MeteoComponent implements OnInit {
   buttonText: string = "Voir la météo";
 
-  constructor() { }
+  constructor(
+    private CommunesService: CommunesService,
+  ) { }
 
   options = {
     layers: [
@@ -23,7 +27,7 @@ export class MeteoComponent implements OnInit {
   };
 
   ngOnInit() {
-
+    this.getCommunes();
   }
 
   activeMapScroll():void {
@@ -35,5 +39,13 @@ export class MeteoComponent implements OnInit {
       this.buttonText = "Voir la météo";
       $('#map').removeClass("active");
     }
+  }
+
+  getCommunes(): void {
+    this.CommunesService.getCommunes().subscribe(data => {
+      for (var commune of data['records']){
+        console.log(commune['fields']['nom_chf']);
+      }
+    });
   }
 }
