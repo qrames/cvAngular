@@ -14,8 +14,12 @@ export class CategoriesService {
 
 
   getCategories(id): Observable<Category> {
-
-    return this.http.get<Category>('http://127.0.0.1:8000/categories/'+id+'/');
+    // option -1 for get all Categories
+    if (id != -1){
+      return this.http.get<Category>('http://127.0.0.1:8000/categories/'+id+'/');
+    } else {
+      return this.http.get<Category>('http://127.0.0.1:8000/categories/');
+    }
 
   }
 
