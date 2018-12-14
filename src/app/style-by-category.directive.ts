@@ -1,26 +1,32 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 import { CategoriesService } from './categories.service'
 import { Category } from './category'
+
+
 @Directive({
   selector: '[technoStyleByCategory]'
 })
-export class StyleByCategoryDirective {
+export class StyleByCategoryDirective implements OnInit {
 
-  categories: Category[];
+  category: Category;
   private defaultColor: string = '#1f2020';
 
   constructor(
     private el: ElementRef,
     private CategoriesService: CategoriesService,
   ) {
-    this.setStyle(this.defaultColor);
+  }
+  ngOnInit(){
+
+    this.getCategories(this.id);
   }
 
-  @Input('technoStyleByCategory') category: number;
 
-  @HostListener('mouseover') onMouseover() {
-    this.getCategories();
+  @Input('technoStyleByCategory') id: number;
+
+  @HostListener('mouseenter') onMouseover() {
+    this.setStyle(this.category.color);
   }
 
   @HostListener('mouseleave') onMouseLeave() {
@@ -31,15 +37,9 @@ export class StyleByCategoryDirective {
   private setStyle(color: string){
     this.el.nativeElement.style.background = color;
   }
-  getCategories(): void {
-    this.CategoriesService.getCategories().subscribe(categories => {
-      // this.categories = categories;
-      var color = '';
-      for(let category of categories){
-      if(category['id'] == this.category)
-        color = category['color'];
-      }
-      this.setStyle(color || this.defaultColor);
+  getCategories(id): void {
+    this.CategoriesService.getCategories(id).subscribe(category => {
+      this.category = category;
     });
   }
 }

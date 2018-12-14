@@ -13,9 +13,9 @@ export class CategoriesService {
   constructor(private http: HttpClient) { }
 
 
-  getCategories(): Observable<Category[]> {
+  getCategories(id): Observable<Category> {
 
-    return this.http.get<Category[]>('http://127.0.0.1:8000/categories/');
+    return this.http.get<Category>('http://127.0.0.1:8000/categories/'+id+'/');
 
   }
 
