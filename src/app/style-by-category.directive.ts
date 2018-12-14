@@ -1,6 +1,6 @@
 import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
-import { CategoriesService } from './categories.service'
+import { CategoryService } from './category.service'
 import { Category } from './category'
 
 
@@ -14,12 +14,12 @@ export class StyleByCategoryDirective implements OnInit {
 
   constructor(
     private el: ElementRef,
-    private CategoriesService: CategoriesService,
+    private CategoryService: CategoryService,
   ) {
   }
   ngOnInit(){
 
-    this.getCategories(this.id);
+    this.getCategory(this.id);
   }
 
 
@@ -37,8 +37,8 @@ export class StyleByCategoryDirective implements OnInit {
   private setStyle(color: string){
     this.el.nativeElement.style.background = color;
   }
-  getCategories(id): void {
-    this.CategoriesService.getCategories(id).subscribe(category => {
+  getCategory(id): void {
+    this.CategoryService.getCategory(id).subscribe(category => {
       this.category = category;
     });
   }

@@ -8,13 +8,13 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 @Injectable({
   providedIn: 'root'
 })
-export class CategoriesService {
+export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
 
-  getCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>('http://127.0.0.1:8000/categories/');
+  getCategory(id): Observable<Category> {
+    return this.http.get<Category>('http://127.0.0.1:8000/categories/'+id+'/');
   }
 
 }
