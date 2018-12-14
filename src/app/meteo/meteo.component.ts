@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import * as $ from 'jquery';
 
 import { icon, latLng, Layer, marker, tileLayer } from 'leaflet';
 
@@ -16,6 +15,7 @@ export class MeteoComponent implements OnInit {
 
   buttonText: string = "Voir la météo";
 	markers: Layer[] = [];
+  active: boolean  = false;
 
   constructor(
     private CommunesService: CommunesService,
@@ -34,17 +34,16 @@ export class MeteoComponent implements OnInit {
     this.getCommunes();
   }
 
-  activeMapScroll():void {
-    if(!$('#map').hasClass("active")){
+  activeMap(): void {
+    console.log(this.active);
+    if (this.active){
       this.buttonText = "Désactiver la carte";
-      $('#map').addClass("active");
-    }
-    else{
+      this.active = false;
+    } else {
       this.buttonText = "Voir la météo";
-      $('#map').removeClass("active");
+      this.active = true;
     }
   }
-
   getCommunes(): void {
     this.CommunesService.getCommunes().subscribe(data => {
       for (var commune of data['records']){

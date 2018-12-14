@@ -1,11 +1,12 @@
-<div id="map">
-  <button type="select" name="select" (click)="activeMapScroll()">
+<div id="map" [ngClass]="{'active': active}">
+  <button type="select" name="select" (click)="activeMap()">
     {{buttonText}}
   </button>
   <div class="curtain">
   </div>
   <div id="myleaflet" leaflet
      [leafletOptions]="options"
-     [leafletLayers]="markers">
+     [leafletLayers]="markers"
+     >
   </div>
 </div>
