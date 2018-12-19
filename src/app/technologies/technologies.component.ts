@@ -4,6 +4,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { TechnologiesService } from '../technologies.service';
 import { Technologie } from '../technologie';
 
+import { CategoriesService } from '../categories.service'
+import { Category } from '../category'
+
 import { StyleByCategoryDirective } from '../style-by-category.directive';
 
 @Component({
@@ -14,13 +17,16 @@ import { StyleByCategoryDirective } from '../style-by-category.directive';
 export class TechnologiesComponent implements OnInit {
 
   technologies: Technologie[];
+  categories:  Category[];
 
   constructor(
-    private TechnologiesService: TechnologiesService
+    private TechnologiesService: TechnologiesService,
+    private CategoriesService: CategoriesService,
   ){}
 
   ngOnInit() {
     this.getTechonologies("", 0);
+    this.getCategories();
   }
 
   getTechonologies(orderBy, minProgress): void {
@@ -66,7 +72,12 @@ export class TechnologiesComponent implements OnInit {
       ];
       }
       this.technologies = sorted;
-      // this.technologies = technologies
+    });
+  }
+
+  getCategories(): void {
+    this.CategoriesService.getCategories().subscribe(categories => {
+      this.categories = categories;
     });
   }
 

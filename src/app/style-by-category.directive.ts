@@ -18,7 +18,6 @@ export class StyleByCategoryDirective implements OnInit {
   ) {
   }
   ngOnInit(){
-
     this.getCategory(this.id);
   }
 
@@ -37,6 +36,7 @@ export class StyleByCategoryDirective implements OnInit {
   private setStyle(color: string){
     this.el.nativeElement.style.background = color;
   }
+
   getCategory(id): void {
     this.CategoryService.getCategory(id).subscribe(category => {
       this.category = category;

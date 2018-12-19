@@ -21,11 +21,39 @@ export class MeteoComponent implements OnInit {
     private CommunesService: CommunesService,
     private WeatherService: WeatherService,
   ) { }
+  
+  basemaps = {
+    Countries: tileLayer.wms('https://demo.boundlessgeo.com/geoserver/ows?', {
+      layers: 'ne:ne_10m_admin_0_countries'
+    }),
+
+    Boundaries: tileLayer.wms('https://demo.boundlessgeo.com/geoserver/ows?', {
+      layers: 'ne:ne_10m_admin_0_boundary_lines_land'
+    }),
+
+    'Countries, then boundaries': tileLayer.wms('https://demo.boundlessgeo.com/geoserver/ows?', {
+      layers: 'ne:ne_10m_admin_0_countries,ne:ne_10m_admin_0_boundary_lines_land'
+    }),
+
+    'Boundaries, then countries': tileLayer.wms('https://demo.boundlessgeo.com/geoserver/ows?', {
+      layers: 'ne:ne_10m_admin_0_boundary_lines_land,ne:ne_10m_admin_0_countries'
+    }),
+    nasa:
+    tileLayer.wms('https://demo.boundlessgeo.com/geoserver/ows?', {
+    layers: 'nasa:bluemarble'
+    })
+  }
 
   options = {
+
     layers: [
-      tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, minZoom: 7, attribution: 'Open Street Map'})
+      // tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, minZoom: 7, attribution: 'Open Street Map'})
+      // tileLayer.wms('https://demo.boundlessgeo.com/geoserver/ows?', {
+      //   layers: 'ne:ne_10m_admin_0_countries,ne:ne_10m_admin_0_boundary_lines_land'
+      // })
+      this.basemaps['nasa'],
     ],
+
     zoom: 7,
     center: latLng(43.8927232, 3.2827625),
   };

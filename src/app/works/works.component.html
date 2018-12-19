@@ -4,9 +4,11 @@
   </h2>
   <ul class="works">
     <li class="work" *ngFor="let work of works" >
+      <h3>{{work.name}}</h3>
       <a class="circle" href="{{work.url != '' ?  work.url : '#'}}">
         <img src="{{work.image}}" alt="">
       </a>
+
     </li>
   </ul>
 

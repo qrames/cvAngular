@@ -14,7 +14,7 @@ export class WorksService {
   constructor(private http : HttpClient) { }
 
   getWorks(): Observable<Work[]>{
-    return this.http.get<Work[]>('http://127.0.0.1:8000/' + 'works/');
+    return this.http.get<Work[]>(environment.DjangoAPI + '/' + 'works/');
   }
 
 }
