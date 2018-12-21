@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  DjangoAPI: "http://data.quentin-rames.fr:8000/",
 };
