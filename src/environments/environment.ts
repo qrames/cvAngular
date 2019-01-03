@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  DjangoAPI: "http://quentin-rames.fr:8000/",
+  DjangoAPI: "http://data.quentin-rames.fr/",
 };
 
 /*
