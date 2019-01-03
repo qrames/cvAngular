@@ -21,7 +21,7 @@ export class MeteoComponent implements OnInit {
     private CommunesService: CommunesService,
     private WeatherService: WeatherService,
   ) { }
-  
+
   basemaps = {
     Countries: tileLayer.wms('https://demo.boundlessgeo.com/geoserver/ows?', {
       layers: 'ne:ne_10m_admin_0_countries'
@@ -65,10 +65,10 @@ export class MeteoComponent implements OnInit {
   activeMap(): void {
     console.log(this.active);
     if (this.active){
-      this.buttonText = "Désactiver la carte";
+      this.buttonText = "Voir la météo";
       this.active = false;
     } else {
-      this.buttonText = "Voir la météo";
+      this.buttonText = "Désactiver la carte";
       this.active = true;
     }
   }
