@@ -1,0 +1,8 @@
+@media screen and(min-width: 600px) {
+  .techTop {
+    grid-template-columns: 300px 1fr;
+    > ul {
+      justify-content: center;
+    }
+  }
+}
