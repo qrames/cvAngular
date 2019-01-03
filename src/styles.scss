@@ -5,14 +5,35 @@ body {
   // font-family: 'Montserrat', sans-serif;
   font-family: 'Indie Flower', cursive;
   color: $color1;
-  background: url("./images/sea.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+  animation: background 40s infinite;
 }
+@keyframes background {
+  0%   {
+    background: url("./images/sea.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  25%  {
+    background: url("./images/sky.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  50%  {
+    background: url("./images/python.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  100% {
+    background: url("./images/climbing.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
 app-root {
   display: block;
   max-width: 1000px;
-  max-height: 90vh;
+  max-height: 85vh;
   overflow-y: scroll;
   background-color: #FFFFFF;
   margin: 5vh auto 0 auto;
