@@ -14,10 +14,14 @@
   </ul>
   <ul>
     <li  *ngFor="let technologie of technologies">
-      <a class="circle" href="{{technologie.url != '' ?  technologie.url : '#'}}" technoStyleByCategory="{{technologie.category}}">
+      <!--<a class="circle" href="{{technologie.url != '' ?  technologie.url : '#'}}" technoStyleByCategory="{{technologie.category}}">-->
+      <div class="circle">
+
         <i class="{{technologie.icon}}"></i>
         <h3>{{technologie.name}}</h3>
-      </a>
+
+      </div>
+      <!--</a>-->
       <h4>
         niveau :
         <div class="progress">
