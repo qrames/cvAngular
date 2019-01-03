@@ -2,16 +2,20 @@
   <h2>
     technologies
   </h2>
-  <label>rechercher :
-  </label>
-  <input (keyup)="onKey($event)">
-  <input type="range" #progress min="0" max="100" (change)="setRange(progress.value)" value="0">
-  <ul>
-    <li class="category" *ngFor="let category of categories"
-    [ngStyle]="{'background-color': category.color}">
-    {{category.name}}
-  </li>
+  <div class="techTop">
+    <div class="techParam">
+      <label for="seachTechnologie">Rechercher une technologe : </label>
+      <input id="seachTechnologie" (keyup)="onKey($event)">
+      <label for="niveauRange">Limiter l'affichage par niveau : </label>
+      <input id="niveauRange" type="range" #progress min="0" max="100" (change)="setRange(progress.value)" value="0">
+    </div>
+    <ul>
+      <li class="category" *ngFor="let category of categories"
+      [ngStyle]="{'background-color': category.color}">
+      {{category.name}}
+    </li>
   </ul>
+  </div>
   <ul>
     <li  *ngFor="let technologie of technologies">
       <!--<a class="circle" href="{{technologie.url != '' ?  technologie.url : '#'}}" technoStyleByCategory="{{technologie.category}}">-->
