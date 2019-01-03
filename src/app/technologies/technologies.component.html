@@ -15,7 +15,7 @@
   <ul>
     <li  *ngFor="let technologie of technologies">
       <!--<a class="circle" href="{{technologie.url != '' ?  technologie.url : '#'}}" technoStyleByCategory="{{technologie.category}}">-->
-      <div class="circle">
+      <div class="circle" technoStyleByCategory="{{technologie.category}}">
 
         <i class="{{technologie.icon}}"></i>
         <h3>{{technologie.name}}</h3>
