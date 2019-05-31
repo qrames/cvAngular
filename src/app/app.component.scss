@@ -7,8 +7,10 @@ h1 {
     display: block;
   }
 }
+@import "../scss/color.scss";
 main {
   text-align: center;
+
 }
 
 #photo{
@@ -22,4 +24,8 @@ main {
   background-position: top;
   border-radius: 150px;
   margin-top: 4vh;
+}
+
+p.strong {
+    font-size: 1.1  rem;
 }
