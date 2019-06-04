@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
-import { Work } from '../works';
-import { WorksService } from '../works.service'
-import { WORKS } from '../mock-works';
+import { Work } from './works';
+import { WorksService } from './works.service'
+import { WORKS } from './mock-works';
 
 @Component({
   selector: 'app-works',

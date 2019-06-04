@@ -1,31 +1,72 @@
-h1 {
-  font-size: 3rem;
-  padding-bottom: 10vh;
-  strong{
-    padding: 0 0 10vh 0;
-    font-size: 4.3rem;
-    display: block;
-  }
-}
 @import "../scss/color.scss";
+
 main {
   text-align: center;
-
 }
 
-#photo{
-  margin: 0 auto;
-  background-size: 200px;
-  width: 200px;
-  height: 200px;
-  background-image: url("../images/quentin.jpg");
-  background-attachment: fixed;
-  background-attachment: scroll;
-  background-position: top;
-  border-radius: 150px;
-  margin-top: 4vh;
-}
 
-p.strong {
-    font-size: 1.1  rem;
+.menu {
+    display: none;
+}
+.btn-style {
+    margin: 0.5rem;
+    width: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    background-color: $color0;
+    box-shadow: 0 0 4px rgba(32,33,36,0.7);
+}
+.linkedin {
+    position: fixed;
+    top: 0;
+    left: 3rem;
+    color: #0077B5;
+}
+.weather {
+    position: fixed;
+    top: 0;
+    left: 6rem;
+    color: #393939;
+}
+nav {
+    z-index: 100;
+    line-height: 0rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    a {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    &.active {
+        background-color: #00000090;
+        height: 200vh;
+        animation: topComing 0.2s;
+
+        width: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+        a {
+            max-width: 300px;
+            display: block;
+            background-color: $color0;
+            padding: 1rem;
+            color: rgb(52, 52, 52);
+            text-decoration: none;
+             &:hover {
+                 background-color: #EEE;
+             }
+        }
+        .menu {
+            display: none;
+        }
+    }
+}
+@keyframes topComing {
+    0% { top: -100vh; }
+    100% { top: 0vh; }
 }

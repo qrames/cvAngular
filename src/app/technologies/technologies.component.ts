@@ -1,13 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 // import { TECHNOLOGIES } from '../mock-technologies';
-import { TechnologiesService } from '../technologies.service';
-import { Technologie } from '../technologie';
+import { TechnologiesService } from './technologies.service';
+import { Technologie } from './technologie';
 
-import { CategoriesService } from '../categories.service'
-import { Category } from '../category'
+import { CategoriesService } from './category/categories.service'
+import { Category } from './category/category'
 
-import { StyleByCategoryDirective } from '../style-by-category.directive';
+import { StyleByCategoryDirective } from './category/style-by-category.directive';
 
 @Component({
   selector: 'app-technologies',

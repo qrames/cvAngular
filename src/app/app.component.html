@@ -1,16 +1,25 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <main>
-  <div id="photo"></div>
-  <h1>
-    Bienvenue sur mon
-    <strong>Portfolio!</strong>
-  </h1>
-  <h2>Quentin, je suis développeur WEB full stack et passionné!</h2>
-  <p class="strong">A côte, je suis un fan d'escalade. Si je dois souligner un point commun entre la pratique de l'escalade et du développement c'est LA PROGRESSION. Essayer, recommencer, apprendre… à chaque nouveau pas c'est de nouvelle compétences et ça devient encore plus intéressant. Plus de technique pour plus de réfection ! Je suis très curieux est ouvert. J'adore écouté de la musique de tout les genres. S'est avec cette même curiosité que j'ai découvert le WEB et j'aime autant le back que le front.</p>
-    <h3>Je vous invite tout de suite a consulter mon portfolio. Il est réalisé avec Angular 7 et Django REST pour les données.</h3>
-    <h4>pour information ce site est responsive n'hésitez a le consulter sur vos mobile, tablette...</h4>
-  <app-meteo></app-meteo>
-  <app-technologies></app-technologies>
-  <app-works></app-works>
-  <router-outlet></router-outlet>
+    <!--The content below is only a placeholder and can be replaced.-->
+    <div style="text-align:center">
+
+        <nav
+        [ngClass]="{'active': isClicked}"
+        (click)="isClicked = !isClicked" >
+            <i class="menu btn-style fas fa-ellipsis-v"></i>
+            <a routerLink="/accueil" routerLinkActive="active">Accueil</a>
+            <a routerLink="/works" routerLinkActive="active">Works</a>
+            <a routerLink="/technologies" routerLinkActive="active">technologies</a>
+            <a routerLink="/contact" routerLinkActive="active">contact</a>
+        </nav>
+        <a class="btn-style linkedin" href="https://www.linkedin.com/in/quentin-rames-89884a112/">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="btn-style weather" routerLink="/weather">
+            <i class="fas fa-cloud-sun"></i>
+        </a>
+        <div [@routeAnimation]="getAnimationData(routerOutlet)">
+            <router-outlet #routerOutlet="outlet"></router-outlet>
+        </div>
+    </div>
+    <!-- <router-outlet></router-outlet> -->
 </main>

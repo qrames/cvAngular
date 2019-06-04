@@ -1,0 +1,10 @@
+.error {
+    color: rgb(139, 65, 65);
+    font-size: 35vw;
+    margin: 1rem;
+}
+@media screen and(min-width: 540px) {
+    .error {
+        font-size: 15rem;
+    }
+}

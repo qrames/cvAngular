@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { icon, latLng, Layer, marker, tileLayer } from 'leaflet';
 
-import { CommunesService } from '../communes.service';
-import { WeatherService } from '../weather.service';
+import { CommunesService } from './communes.service';
+import { WeatherService } from './weather.service';
 
 @Component({
   selector: 'app-meteo',
@@ -47,11 +47,11 @@ export class MeteoComponent implements OnInit {
   options = {
 
     layers: [
-      // tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, minZoom: 7, attribution: 'Open Street Map'})
+      tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, minZoom: 3, attribution: 'Open Street Map'})
       // tileLayer.wms('https://demo.boundlessgeo.com/geoserver/ows?', {
       //   layers: 'ne:ne_10m_admin_0_countries,ne:ne_10m_admin_0_boundary_lines_land'
       // })
-      this.basemaps['nasa'],
+      // this.basemaps['nasa'],
     ],
 
     zoom: 7,
